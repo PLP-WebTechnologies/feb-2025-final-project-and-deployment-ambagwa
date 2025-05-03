@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>My Blog</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <footer>
+          <p>&copy; 2023 My Blog. All Rights Reserved</p>
+        </footer>
+      </div>
+      <div class="divider"></div>
+
+      <div class="main">
+        <h1>Contact Me</h1>
+        <section class="contacts">
+          <p>Feel free to get in touch with me</p>
+          <form class="contacts-form" id="contacts-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required />
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" required></textarea>
+            <br />
+            <button id="submit-button" type="submit">Send Message</button>
+          </form>
+        </section>
+        <div class="success" id="popup">
+          <p>Thanks for yor message!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

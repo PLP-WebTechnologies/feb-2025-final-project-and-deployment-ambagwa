@@ -8,6 +8,8 @@
   --color-2: #8d99ae;
   --color-3: #edf2f4;
   --text-color: #f4f4f4;
+  --form-background: #ade8f4;
+  --success-color: #80ed99;
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -207,6 +209,120 @@ footer {
   padding: 1rem 1.5rem;
   margin: 2rem 0;
   font-style: italic;
-  background-color: rgba(141, 153, 174, 0.1); /* color-2 with 10% opacity */
+  background-color: rgba(141, 153, 174, 0.1);
   color: var(--color-1);
 }
+.contacts-form {
+  background-color: var(--form-background);
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.contacts-form label {
+  display: block;
+}
+.contacts-form input {
+  width: 80%;
+  margin: 0 auto 5px;
+  padding: 5px 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 1px solid var(--color-1);
+  text-align: center;
+}
+.contacts-form textarea {
+  outline: none;
+  width: 80%;
+  margin: 10px auto 0;
+  padding: 5px 0;
+  padding: 5px;
+  background: transparent;
+}
+#submit-button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--color-2);
+  cursor: pointer;
+  margin: 20px 0 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#submit-button:hover {
+  background-color: var(--color-1);
+  color: var(--text-color);
+}
+.success {
+  background-color: var(--success-color);
+  padding: 15px;
+  margin: 20px auto;
+  width: 70%;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-out;
+  position: relative;
+}
+
+.success.show {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.5s ease-out;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .header {
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  
+    .header h1 {
+      margin-top: 0;
+    }
+  
+    nav {
+      padding: 0;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 0;
+    }
+  
+    nav ul li {
+      margin: 0 10px;
+    }
+  
+    .divider {
+      display: none;
+    }
+  
+    .main {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
